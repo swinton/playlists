@@ -1,0 +1,37 @@
+{
+  "name": "playlists",
+  "version": "0.0.0",
+  "description": "How I Playlist",
+  "author": "Steve Winton <stevewinton@gmail.com> (https://github.com/swinton)",
+  "main": "dist/index.js",
+  "license": "ISC",
+  "keywords": [],
+  "scripts": {
+    "test": "jest",
+    "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}'",
+    "build": "tsc --noEmit && parcel build src/index.ts --target=node"
+  },
+  "dependencies": {
+    "js-yaml": "^3.13.1",
+    "spotify-web-api-node": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "latest",
+    "@types/js-yaml": "^3.12.1",
+    "@types/node": "^12.11.7",
+    "@types/spotify-web-api-node": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-prettier": "latest",
+    "jest": "latest",
+    "parcel": "latest",
+    "prettier": "latest",
+    "ts-jest": "latest",
+    "typescript": "latest"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  }
+}
