@@ -1,5 +1,7 @@
 name: All My Folk 🍓
-limit: 100
-seed_genres: folk
-target_acousticness: 1.0
-market: from_token
+id: 3vvtpYZWVdHKcU1rdZaYYE
+params:
+  limit: 100
+  seed_genres: folk
+  target_acousticness: 1.0
+  market: from_token

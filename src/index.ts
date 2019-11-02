@@ -9,7 +9,7 @@ const refreshToken: string = process.env.SPOTIFY_REFRESH_TOKEN || '';
   try {
     const spotify = await getSpotifyClient(clientId, clientSecret, refreshToken);
     const spec = loadPlaylistSpec('folk.yml');
-    const { body: { tracks: recommendations } } = await spotify.getRecommendations(spec);
+    const { body: { tracks: recommendations } } = await spotify.getRecommendations(spec.params);
     console.log(recommendations);
   } catch (e) {
     console.log(e);
