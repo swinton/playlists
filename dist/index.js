@@ -7216,7 +7216,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const glob_1 = __importDefault(__webpack_require__(402));
 const spotify_client_1 = __importDefault(__webpack_require__(233));
-const load_playlist_spec_1 = __importDefault(__webpack_require__(789));
+const load_playlist_spec_1 = __webpack_require__(789);
 const clientId = process.env.SPOTIFY_CLIENT_ID || '';
 const clientSecret = process.env.SPOTIFY_CLIENT_SECRET || '';
 const refreshToken = process.env.SPOTIFY_REFRESH_TOKEN || '';
@@ -7228,7 +7228,7 @@ const refreshToken = process.env.SPOTIFY_REFRESH_TOKEN || '';
             // Iterate over all playlist specs
             specs.forEach((spec) => __awaiter(this, void 0, void 0, function* () {
                 // Load playlist spec
-                const playlist = load_playlist_spec_1.default(spec);
+                const playlist = load_playlist_spec_1.loadPlaylistSpec(spec);
                 // Get recommendations
                 const { body: { tracks: recommendations } } = yield spotify.getRecommendations(playlist.params);
                 // Update playlist
@@ -13303,7 +13303,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = __importDefault(__webpack_require__(747));
 const js_yaml_1 = __importDefault(__webpack_require__(414));
-const loadPlaylistSpec = function (path) {
+;
+exports.loadPlaylistSpec = function (path) {
     // Get document, or throw exception on error
     try {
         return js_yaml_1.default.safeLoad(fs_1.default.readFileSync(path, 'utf8'));
@@ -13312,7 +13313,7 @@ const loadPlaylistSpec = function (path) {
         throw e;
     }
 };
-exports.default = loadPlaylistSpec;
+exports.default = exports.loadPlaylistSpec;
 
 
 /***/ }),
