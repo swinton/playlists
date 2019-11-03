@@ -1,5 +1,5 @@
 # `playlists`
-> How I Playlist
+> :headphones: :relaxed: Playlists on Spotify, automatically regenerated every day using GitHub Actions
 
 ## Resources
 - [Authorization Guide | Spotify for Developers](https://developer.spotify.com/documentation/general/guides/authorization-guide/)
