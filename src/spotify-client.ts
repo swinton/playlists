@@ -1,6 +1,6 @@
 import SpotifyWebApi from 'spotify-web-api-node';
 
-export const getSpotifyClient = async function(clientId: string, clientSecret: string, refreshToken: string) {
+export const getSpotifyClient = async function(clientId: string, clientSecret: string, refreshToken: string): Promise<SpotifyWebApi> {
   // Construct client
   const spotifyApi = new SpotifyWebApi({
     clientId,
