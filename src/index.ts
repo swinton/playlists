@@ -22,13 +22,17 @@ const refreshToken: string = process.env.SPOTIFY_REFRESH_TOKEN || '';
         const { body: { tracks: recommendations } } = await spotify.getRecommendations(playlist.params);
 
         // Update playlist
-        const { body: response } = await spotify.replaceTracksInPlaylist(
-          playlist.id,
-          recommendations.map(
-            recommendation => recommendation.uri
-          )
-        );
-        console.log('snapshot_id: ', (response as {snapshot_id: string}).snapshot_id);
+        try {
+          const { body: response } = await spotify.replaceTracksInPlaylist(
+            playlist.id,
+            recommendations.map(
+              recommendation => recommendation.uri
+            )
+          );
+          console.log(`Created playlist ${ playlist.id } snapshot: ${ (response as {snapshot_id: string}).snapshot_id }`);
+        } catch (e) {
+          console.log(`Error refreshing playlist ${ playlist.id }: ${ (e as Error).message }`);
+        }
       });
     });
   } catch (e) {
