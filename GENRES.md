@@ -130,4 +130,3 @@ Available genre seeds, fetched via [this Spotify API route](https://developer.sp
 | turkish           |
 | work-out          |
 | world-music       |
-
