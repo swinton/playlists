@@ -12,6 +12,8 @@
     "build": "tsc --noEmit && parcel build src/index.ts --target=node"
   },
   "dependencies": {
+    "@types/glob": "^7.1.1",
+    "glob": "^7.1.5",
     "js-yaml": "^3.13.1",
     "spotify-web-api-node": "^4.0.0"
   },
