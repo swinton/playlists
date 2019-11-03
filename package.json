@@ -9,7 +9,7 @@
   "scripts": {
     "watch": "tsc --watch",
     "test": "jest",
-    "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}'",
+    "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --fix",
     "build": "tsc --noEmit && ncc build src/index.ts"
   },
   "dependencies": {
