@@ -7232,8 +7232,13 @@ const refreshToken = process.env.SPOTIFY_REFRESH_TOKEN || '';
                 // Get recommendations
                 const { body: { tracks: recommendations } } = yield spotify.getRecommendations(playlist.params);
                 // Update playlist
-                const { body: response } = yield spotify.replaceTracksInPlaylist(playlist.id, recommendations.map(recommendation => recommendation.uri));
-                console.log('snapshot_id: ', response.snapshot_id);
+                try {
+                    const { body: response } = yield spotify.replaceTracksInPlaylist(playlist.id, recommendations.map(recommendation => recommendation.uri));
+                    console.log(`Created playlist ${playlist.id} snapshot: ${response.snapshot_id}`);
+                }
+                catch (e) {
+                    console.log(`Error refreshing playlist ${playlist.id}: ${e.message}`);
+                }
             }));
         });
     }
