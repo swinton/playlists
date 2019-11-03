@@ -7,10 +7,23 @@ const refreshToken: string = process.env.SPOTIFY_REFRESH_TOKEN || '';
 
 (async () => {
   try {
+    // Get Spotify client
     const spotify = await getSpotifyClient(clientId, clientSecret, refreshToken);
-    const spec = loadPlaylistSpec('folk.yml');
-    const { body: { tracks: recommendations } } = await spotify.getRecommendations(spec.params);
-    console.log(recommendations);
+
+    // Load playlist spec
+    const playlist = loadPlaylistSpec('folk.yml');
+
+    // Get recommendations
+    const { body: { tracks: recommendations } } = await spotify.getRecommendations(playlist.params);
+
+    // Update playlist
+    const response = await spotify.replaceTracksInPlaylist(
+      playlist.id,
+      recommendations.map(
+        recommendation => recommendation.uri
+      )
+    );
+    console.log(response);
   } catch (e) {
     console.log(e);
     process.exit(1);
