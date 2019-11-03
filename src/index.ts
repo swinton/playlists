@@ -1,7 +1,7 @@
 import glob from 'glob';
 
 import getSpotifyClient from './spotify-client';
-import loadPlaylistSpec from './load-playlist-spec';
+import { loadPlaylistSpec, PlaylistSpec } from './load-playlist-spec';
 
 const clientId: string = process.env.SPOTIFY_CLIENT_ID || '';
 const clientSecret: string = process.env.SPOTIFY_CLIENT_SECRET || '';
@@ -16,7 +16,7 @@ const refreshToken: string = process.env.SPOTIFY_REFRESH_TOKEN || '';
       // Iterate over all playlist specs
       specs.forEach(async (spec) => {
         // Load playlist spec
-        const playlist = loadPlaylistSpec(spec);
+        const playlist: PlaylistSpec = loadPlaylistSpec(spec);
 
         // Get recommendations
         const { body: { tracks: recommendations } } = await spotify.getRecommendations(playlist.params);
