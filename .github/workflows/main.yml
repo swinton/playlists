@@ -1,0 +1,14 @@
+name: Regenerate Playlists
+
+on:
+  push
+
+jobs:
+  regenerate-playlists:
+    name: Regenerate Playlists
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1.0.0
+    - name: Regenerate
+      uses: .

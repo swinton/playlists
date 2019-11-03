@@ -1,0 +1,5 @@
+name: 'Playlists'
+description: 'Playlists on Spotify, automatically regenerated every day using GitHub Actions'
+runs:
+  using: 'node12'
+  main: './dist/index.js'
