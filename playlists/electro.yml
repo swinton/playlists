@@ -2,5 +2,4 @@ id: 1M2lMFnU7sOkO80NjEXwSU
 params:
   limit: 100
   seed_genres: electro
-  target_acousticness: 0.0
   market: from_token
