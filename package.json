@@ -9,7 +9,7 @@
   "scripts": {
     "test": "jest",
     "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}'",
-    "build": "tsc --noEmit && parcel build src/index.ts --target=node"
+    "build": "tsc --noEmit && ncc build src/index.ts"
   },
   "dependencies": {
     "@types/glob": "^7.1.1",
@@ -24,11 +24,11 @@
     "@types/spotify-web-api-node": "^4.0.1",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
+    "@zeit/ncc": "^0.20.5",
     "eslint": "latest",
     "eslint-config-prettier": "latest",
     "eslint-plugin-prettier": "latest",
     "jest": "latest",
-    "parcel": "latest",
     "prettier": "latest",
     "ts-jest": "latest",
     "typescript": "latest"
