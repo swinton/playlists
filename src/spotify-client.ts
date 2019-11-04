@@ -1,6 +1,10 @@
-import SpotifyWebApi from 'spotify-web-api-node';
+import SpotifyWebApi from "spotify-web-api-node";
 
-export const getSpotifyClient = async function(clientId: string, clientSecret: string, refreshToken: string): Promise<SpotifyWebApi> {
+export const getSpotifyClient = async function(
+  clientId: string,
+  clientSecret: string,
+  refreshToken: string
+): Promise<SpotifyWebApi> {
   // Construct client
   const spotifyApi = new SpotifyWebApi({
     clientId,
@@ -12,10 +16,12 @@ export const getSpotifyClient = async function(clientId: string, clientSecret: s
 
   // Get an access token
   try {
-    const { body: { access_token: accessToken } } = await spotifyApi.refreshAccessToken();
+    const {
+      body: { access_token: accessToken }
+    } = await spotifyApi.refreshAccessToken();
     spotifyApi.setAccessToken(accessToken);
   } catch (e) {
-    throw(e);
+    throw e;
   }
 
   return spotifyApi;
