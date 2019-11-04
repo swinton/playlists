@@ -5174,7 +5174,7 @@ exports.getSpotifyClient = function (clientId, clientSecret, refreshToken) {
             spotifyApi.setAccessToken(accessToken);
         }
         catch (e) {
-            throw (e);
+            throw e;
         }
         return spotifyApi;
     });
@@ -7217,14 +7217,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const glob_1 = __importDefault(__webpack_require__(402));
 const spotify_client_1 = __importDefault(__webpack_require__(233));
 const load_playlist_spec_1 = __webpack_require__(789);
-const clientId = process.env.SPOTIFY_CLIENT_ID || '';
-const clientSecret = process.env.SPOTIFY_CLIENT_SECRET || '';
-const refreshToken = process.env.SPOTIFY_REFRESH_TOKEN || '';
+const clientId = process.env.SPOTIFY_CLIENT_ID || "";
+const clientSecret = process.env.SPOTIFY_CLIENT_SECRET || "";
+const refreshToken = process.env.SPOTIFY_REFRESH_TOKEN || "";
 (() => __awaiter(void 0, void 0, void 0, function* () {
     try {
         // Get Spotify client
         const spotify = yield spotify_client_1.default(clientId, clientSecret, refreshToken);
-        glob_1.default('./playlists/*.yml', function (err, specs) {
+        glob_1.default("./playlists/*.yml", function (err, specs) {
             // Iterate over all playlist specs
             specs.forEach((spec) => __awaiter(this, void 0, void 0, function* () {
                 // Load playlist spec
@@ -13308,11 +13308,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = __importDefault(__webpack_require__(747));
 const js_yaml_1 = __importDefault(__webpack_require__(414));
-;
 exports.loadPlaylistSpec = function (path) {
     // Get document, or throw exception on error
     try {
-        return js_yaml_1.default.safeLoad(fs_1.default.readFileSync(path, 'utf8'));
+        return js_yaml_1.default.safeLoad(fs_1.default.readFileSync(path, "utf8"));
     }
     catch (e) {
         throw e;
