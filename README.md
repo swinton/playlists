@@ -1,11 +1,11 @@
 # `playlists`
-> :headphones: :relaxed: Playlists on Spotify, automatically regenerated every week using GitHub Actions
+> :headphones: :relaxed: Playlists on Spotify, automatically regenerated every day using GitHub Actions
 
 ## What is this even about?
 
 Spotify _genre radio_ (where you could listen to a continuous stream of songs of a particular genre) used to be a thing, and now I'm bringing it back!
 
-[Playlists in this repo are defined using _seed data_](playlists) and regenerated every Monday, using [the Spotify recommendations API](https://developer.spotify.com/documentation/web-api/reference/browse/get-recommendations/).
+[Playlists in this repo are defined using _seed data_](playlists) and regenerated every day, using [the Spotify recommendations API](https://developer.spotify.com/documentation/web-api/reference/browse/get-recommendations/) and [GitHub Actions](https://github.com/features/actions).
 
 ## Example
 
