@@ -13,14 +13,14 @@
     "build": "tsc --noEmit && ncc build src/index.ts"
   },
   "dependencies": {
-    "@types/glob": "^7.1.1",
-    "@types/js-yaml": "^3.12.1",
-    "@types/spotify-web-api-node": "^4.0.1",
     "glob": "^7.1.5",
     "js-yaml": "^3.13.1",
     "spotify-web-api-node": "^4.0.0"
   },
   "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/js-yaml": "^3.12.1",
+    "@types/spotify-web-api-node": "^4.0.1",
     "@types/jest": "^24.0.19",
     "@typescript-eslint/eslint-plugin": "^2.4.0",
     "@typescript-eslint/parser": "^2.4.0",
