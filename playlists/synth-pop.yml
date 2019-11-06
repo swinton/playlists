@@ -1,0 +1,6 @@
+id: 23mDdDfo0Tpsc2VdzOGKCp
+url: https://open.spotify.com/playlist/23mDdDfo0Tpsc2VdzOGKCp
+params:
+  limit: 100
+  seed_genres: synth-pop
+  market: from_token
