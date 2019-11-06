@@ -1,5 +1,5 @@
 # `playlists`
-> :headphones: :relaxed: Playlists on Spotify, automatically regenerated every day using GitHub Actions
+> :headphones: :relaxed: Playlists on Spotify, released every day using GitHub Actions
 
 ## What is this even about?
 
