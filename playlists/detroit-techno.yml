@@ -1,0 +1,6 @@
+id: 1YGpqmIJbFOVYWeVV9kbXa
+url: https://open.spotify.com/playlist/1YGpqmIJbFOVYWeVV9kbXa
+params:
+  limit: 100
+  seed_genres: detroit-techno
+  market: from_token
