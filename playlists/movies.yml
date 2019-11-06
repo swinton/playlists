@@ -1,0 +1,6 @@
+id: 1fPRjXj1FA83SXboJWNdKw
+url: https://open.spotify.com/playlist/1fPRjXj1FA83SXboJWNdKw
+params:
+  limit: 100
+  seed_genres: movies
+  market: from_token
