@@ -2,5 +2,5 @@ id: 7zX4PjxVa1LBNVEFJ9fTD0
 url: https://open.spotify.com/playlist/7zX4PjxVa1LBNVEFJ9fTD0
 params:
   limit: 100
-  seed_genres: 
+  seed_genres: minimal-techno
   market: from_token
